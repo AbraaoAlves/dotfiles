@@ -1,0 +1,9 @@
+[user]
+	email = abraao.teodosio@gmail.com
+	name = AbraaoAlves
+[init]
+  defaultBranch = main
+
+[color]
+	ui = true
+
