@@ -147,3 +147,16 @@ cmd sudo chsh -s $(which zsh);
 # .gitconfig
 echoSectionTitle "Creating symlink for .gitconfig at ~/.gitconfig";
 cmd ln -sf $dotfiles/git/.gitconfig $HOME/.gitconfig;
+
+
+echoColorEmptyLine;
+cmd echo "Congratulations!";
+cmd echo;
+cmd echo "Now you have all the environment set in minutes.";
+cmd echo "Read the docs in https://github.com/AbraaoAlves/dotfiles to know the features and keymappings.";
+cmd echo "Also you can see .dotfiles_installation_log file in you home directory with all outputs from this operation.";
+cmd echo;
+cmd echo "You have to reboot your system to see the changes.";
+echoNoColorEmptyLine;
+
+cmd read -p "Press Enter to quit..."
