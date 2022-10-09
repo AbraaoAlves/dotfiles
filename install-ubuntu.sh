@@ -1,3 +1,16 @@
+#!/bin/bash
+
+# colors
+green="\033[0;32m"
+no_color="\033[0m"
+
+# locations
+
+dotfiles="$HOME/.dotfiles"
+tmp="/tmp/.dotfiles"
+log=$HOME/.dotfiles_installation_log
+
+
 function echoColorEmptyLine() {
   echo -e "${green}\n";
   echo >> $log;
@@ -68,6 +81,9 @@ echoNoColorEmptyLine;
 # echoSectionTitle "Installing Git";
 # aptInstall git;
 
+echoSectionTitle "Cloning dotfiles repo in $dotfiles directory";
+gitClone https://github.com/AbraaoAlves/dotfiles.git $dotfiles;
+
 echoColorEmptyLine;
 cmd echo "████████╗███████╗██████╗ ███╗   ███╗██╗███╗   ██╗ █████╗ ██╗     ";
 cmd echo "╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗██║     ";
@@ -128,4 +144,6 @@ cmd rm $HOME/.zshrc;
 cmd ln -s $dotfiles/zsh/.zshrc $HOME/.zshrc;
 cmd sudo chsh -s $(which zsh);
 
-
+# .gitconfig
+echoSectionTitle "Creating symlink for .gitconfig at ~/.gitconfig";
+cmd ln -sf $dotfiles/git/.gitconfig $HOME/.gitconfig;
