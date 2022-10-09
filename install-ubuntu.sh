@@ -113,3 +113,19 @@ cmd gitClone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 cmd asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
 
+echoColorEmptyLine;
+echo "███████╗███████╗████████╗████████╗██╗███╗   ██╗ ██████╗ ███████╗";
+echo "██╔════╝██╔════╝╚══██╔══╝╚══██╔══╝██║████╗  ██║██╔════╝ ██╔════╝";
+echo "███████╗█████╗     ██║      ██║   ██║██╔██╗ ██║██║  ███╗███████╗";
+echo "╚════██║██╔══╝     ██║      ██║   ██║██║╚██╗██║██║   ██║╚════██║";
+echo "███████║███████╗   ██║      ██║   ██║██║ ╚████║╚██████╔╝███████║";
+echo "╚══════╝╚══════╝   ╚═╝      ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝";
+echoNoColorEmptyLine;
+
+# zsh
+echoSectionTitle "Creating symlink for Zsh at ~/.zshrc";
+cmd rm $HOME/.zshrc;
+cmd ln -s $dotfiles/zsh/.zshrc $HOME/.zshrc;
+cmd sudo chsh -s $(which zsh);
+
+
