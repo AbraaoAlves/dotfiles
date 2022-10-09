@@ -84,7 +84,6 @@ echoSectionTitle "Installing Oh-My-Zsh";
 cmd wget https://raw.githubusercontent.com/rupa/z/master/z.sh;
 cmd mv z.sh .z.sh;
 
-
 echoSectionTitle "Installing Powerlevel10k";
 # mkdir -p $config;
 # echoHighlight "$config folder created";
@@ -96,5 +95,21 @@ gitClone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/pl
 
 echoSectionTitle "Installing zsh-completions";
 gitClone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions;
+
+
+echoColorEmptyLine;
+echo "██████╗ ███████╗██╗   ██╗    ███████╗████████╗██╗   ██╗███████╗███████╗";
+echo "██╔══██╗██╔════╝██║   ██║    ██╔════╝╚══██╔══╝██║   ██║██╔════╝██╔════╝";
+echo "██║  ██║█████╗  ██║   ██║    ███████╗   ██║   ██║   ██║█████╗  █████╗  ";
+echo "██║  ██║██╔══╝  ╚██╗ ██╔╝    ╚════██║   ██║   ██║   ██║██╔══╝  ██╔══╝  ";
+echo "██████╔╝███████╗ ╚████╔╝     ███████║   ██║   ╚██████╔╝██║     ██║     ";
+echo "╚═════╝ ╚══════╝  ╚═══╝      ╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝     ";
+echoNoColorEmptyLine;
+
+# install asdf
+cmd gitClone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
+
+# install asdf nodejs with legacy system, using nvmrc
+cmd asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
 
