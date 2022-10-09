@@ -3,6 +3,10 @@ function echoColorEmptyLine() {
   echo >> $log;
 }
 
+function aptUpdate() {
+  cmd sudo apt update;
+}
+
 echoColorEmptyLine;
 cmd echo "Hello, fellow programmer! Welcome to Abraao's";
 cmd echo;
@@ -30,6 +34,29 @@ echoNoColorEmptyLine;
 read -p "Press Enter to continue...";
 
 echoSectionTitle "Updating system";
-cmd sudo apt update;
-cmd sudo apt -y upgrade;
+cmd aptUpdate & sudo apt -y upgrade;
+
+echoColorEmptyLine;
+echo "██████╗ ███████╗██████╗ ███████╗███╗   ██╗██████╗ ███████╗███╗   ██╗ ██████╗██╗███████╗███████╗";
+echo "██╔══██╗██╔════╝██╔══██╗██╔════╝████╗  ██║██╔══██╗██╔════╝████╗  ██║██╔════╝██║██╔════╝██╔════╝";
+echo "██║  ██║█████╗  ██████╔╝█████╗  ██╔██╗ ██║██║  ██║█████╗  ██╔██╗ ██║██║     ██║█████╗  ███████╗";
+echo "██║  ██║██╔══╝  ██╔═══╝ ██╔══╝  ██║╚██╗██║██║  ██║██╔══╝  ██║╚██╗██║██║     ██║██╔══╝  ╚════██║";
+echo "██████╔╝███████╗██║     ███████╗██║ ╚████║██████╔╝███████╗██║ ╚████║╚██████╗██║███████╗███████║";
+echo "╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝  ╚═══╝ ╚═════╝╚═╝╚══════╝╚══════╝";
+echoNoColorEmptyLine;
+
+# echoSectionTitle "Installing curl";
+# cmd aptInstall curl;
+
+# echoSectionTitle "Installing build-essential";
+# cmd aptInstall build-essential;
+
+# echoSectionTitle "Installing apt dependencies";
+# aptInstall software-properties-common;
+
+# echoSectionTitle "Installing dconf";
+# aptInstall dconf-editor;
+
+# echoSectionTitle "Installing Git";
+# aptInstall git;
 
