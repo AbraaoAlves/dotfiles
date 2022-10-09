@@ -19,3 +19,19 @@
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
 
+[alias]
+	st = status -sb
+	dc = diff --cached
+	ap = add .
+	cm = commit -m
+	unstage = reset HEAD --
+    undo = reset HEAD~1
+	ck = checkout
+	br = branch
+	cl = clone
+	m = merge
+	r = rebase
+	rc = rebase --continue
+	last = log -1 --stat
+	hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+	
