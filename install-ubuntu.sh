@@ -143,6 +143,7 @@ echoNoColorEmptyLine;
 
 # install asdf
 cmd gitClone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
+cmd source $HOME/.asdf/asdf.sh
 
 # install asdf plugins
 cmd asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
