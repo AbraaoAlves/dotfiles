@@ -10,9 +10,28 @@ dotfiles="$HOME/.dotfiles"
 tmp="/tmp/.dotfiles"
 log=$HOME/.dotfiles_installation_log
 
+# functions 
+function echoSectionTitle() {
+  echo -e "${green}";
+  echo >> $log;
+  echo "==============================================================" | tee -a $log;
+  echo "= $1" | tee -a $log;
+  echo "==============================================================" | tee -a $log;
+  echo -e "${no_color}";
+  echo >> $log;
+}
+
+function cmd() {
+  "$@" 2>&1 | tee -a $log;
+}
 
 function echoColorEmptyLine() {
   echo -e "${green}\n";
+  echo >> $log;
+}
+
+function echoNoColorEmptyLine() {
+  echo -e "${no_color}\n";
   echo >> $log;
 }
 
